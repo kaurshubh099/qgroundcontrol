@@ -275,10 +275,10 @@
         <file alias="VibrationPage.qml">src/AnalyzeView/VibrationPage.qml</file>
         <file alias="VirtualJoystick.qml">src/FlightDisplay/VirtualJoystick.qml</file>
         <file alias="VTOLLandingPatternEditor.qml">src/PlanView/VTOLLandingPatternEditor.qml</file>
-        <file alias="modifications/Loginpage.qml">modifications/Loginpage.qml</file>
-        <file alias="modifications/NpntProcess.qml">modifications/NpntProcess.qml</file>
-        <file alias="modifications/OtpVerify.qml">modifications/OtpVerify.qml</file>
-        <file alias="modifications/HomePage.qml">modifications/HomePage.qml</file>
+        <file>modifications/HomePage.qml</file>
+        <file>modifications/Loginpage.qml</file>
+        <file>modifications/NpntProcess.qml</file>
+        <file>modifications/OtpVerify.qml</file>
     </qresource>
     <qresource prefix="/FirstRunPromptDialogs">
         <file alias="UnitsFirstRunPrompt.qml">src/FirstRunPromptDialogs/UnitsFirstRunPrompt.qml</file>

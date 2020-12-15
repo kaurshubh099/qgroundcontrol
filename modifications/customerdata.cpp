@@ -115,10 +115,10 @@ void CustomerData::readyReadDroneNo()
     QNetworkReply* reply = qobject_cast<QNetworkReply*>(sender());
     QByteArray replyArray = reply->readAll();
     qInfo() << replyArray;
-    if(replyArray == "Your drone is not registered"){
+    if(replyArray.contains("Your drone is not registered")){
             emit droneNotRegistered();
         }
-    else if(replyArray.contains("modal")){
+    if(replyArray.contains("modal")){
             emit droneRegistered();
         }
 

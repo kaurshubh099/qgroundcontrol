@@ -29,7 +29,7 @@ TARGET   = QGroundControl
 TEMPLATE = app
 QGCROOT  = $$PWD
 
-QML_IMPORT_PATH += $$PWD/src/QmlControls
+QML_IMPORT_PATH +=$$PWD/src/QmlControls
 
 #
 # OS Specific settings
@@ -325,7 +325,7 @@ include(QGCExternalLibs.pri)
 # Resources (custom code can replace them)
 #
 
-CustomBuild {
+CustomBuild{
     exists($$PWD/custom/qgroundcontrol.qrc) {
         message("Using custom qgroundcontrol.qrc")
         RESOURCES += $$PWD/custom/qgroundcontrol.qrc

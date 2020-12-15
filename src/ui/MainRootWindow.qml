@@ -20,6 +20,7 @@ import QGroundControl.ScreenTools   1.0
 import QGroundControl.FlightDisplay 1.0
 import QGroundControl.FlightMap     1.0
 
+import "qrc:/qml/modifications/"
 import com.Login 1.0
 import com.customerData 1.0
 
@@ -131,7 +132,7 @@ ApplicationWindow {
              vis: !QGroundControl.multiVehicleManager.activeVehicle || QGroundControl.multiVehicleManager.activeVehicle.vehicleLinkManager.communicationLost
          }
 
-        LoginPage{
+        Loginpage{
         id:login
         vis:true
 
