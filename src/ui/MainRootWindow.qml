@@ -126,12 +126,12 @@ ApplicationWindow {
 
         }
 
-       HomePage{
-            id: home
-            vis: !QGroundControl.multiVehicleManager.activeVehicle || QGroundControl.multiVehicleManager.activeVehicle.vehicleLinkManager.communicationLost
-        }
+        HomePage{
+             id: home
+             vis: !QGroundControl.multiVehicleManager.activeVehicle || QGroundControl.multiVehicleManager.activeVehicle.vehicleLinkManager.communicationLost
+         }
 
-        Loginpage{
+        LoginPage{
         id:login
         vis:true
 

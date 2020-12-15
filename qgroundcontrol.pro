@@ -378,6 +378,7 @@ INCLUDEPATH += .
 
 INCLUDEPATH += \
     include/ui \
+    modifications \
     src \
     src/ADSB \
     src/api \
@@ -424,7 +425,7 @@ contains (DEFINES, QGC_ENABLE_PAIRING) {
 #
 
 HEADERS += \
-    modifications/customerdata.h \
+    modifications/customerdata.h\
     modifications/login.h \
     src/QmlControls/QmlUnitsConversion.h \
     src/Vehicle/VehicleEscStatusFactGroup.h \
