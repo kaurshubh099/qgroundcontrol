@@ -151,6 +151,7 @@ ApplicationWindow {
             }
             onLoginButton:{
                 auth.okButton = true;
+                mainWindow.pushPreventViewSwitch()
             }
         }
 
@@ -175,8 +176,6 @@ ApplicationWindow {
 
         NpntProcess{
             id: npnt
-            onCheck2Changed: npnt.vis=false
-
 }
 
     QtObject {

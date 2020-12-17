@@ -54,6 +54,7 @@ Rectangle {
                 panelLoader.setSource("VehicleSummary.qml")
             }
         } else if (QGroundControl.multiVehicleManager.parameterReadyVehicleAvailable) {
+
             panelLoader.setSourceComponent(missingParametersVehicleSummaryComponent)
         } else {
             panelLoader.setSourceComponent(disconnectedVehicleSummaryComponent)

@@ -14,6 +14,9 @@
 #include "AutoPilotPlugin.h"
 #include "QGCApplication.h"
 #include "FirmwarePlugin.h"
+#include "customerdata.h"
+
+extern bool successfulLogin;
 
 AutoPilotPlugin::AutoPilotPlugin(Vehicle* vehicle, QObject* parent)
     : QObject(parent)
@@ -70,7 +73,7 @@ void AutoPilotPlugin::parametersReadyPreChecks(void)
         }
     }
 
-    if (!_setupComplete) {
+    if (!_setupComplete && successfulLogin) {
         qgcApp()->showAppMessage(tr("One or more vehicle components require setup prior to flight."));
 
         // Take the user to Vehicle Summary
