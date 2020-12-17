@@ -64,7 +64,8 @@ ApplicationWindow {
                 login.passwrd = "";
                 login.vis = true;
                 otp.vis = false;
-                dialogWrongDetails.visible = true;
+                showMessageDialog("Invalid credentials","Please enter the correct cerdentials.");
+
             }
             onCorrectOTP: {
                 auth.otp = "";
@@ -83,44 +84,16 @@ ApplicationWindow {
                 otp.vis = true;
                 npnt.vis = false;
                 login.vis = false;
-                dialogWrongOtp.visible =true;
+                showMessageDialog("Wrong OTP","Wrong OTP!");
             }
 
             onDroneNotRegistered: {
                 npnt.check2 = true;
             }
             onDroneRegistered: {
-                dialogDroneNotRegistered.visible=true;
+                showMessageDialog("Register drone","Your drone is not registered.");
             }
 
-        }
-    MessageDialog {
-            id : dialogWrongOtp
-            visible: false
-            title: "Wrong OTP"
-            text: "Wrong OTP!"
-            standardButtons: StandardButton.Close
-        }
-    MessageDialog {
-            id : dialogWrongDetails
-            visible: false
-            title: "Invalid credentials"
-            text: "Please enter the correct cerdentials."
-            standardButtons: StandardButton.Close
-        }
-        MessageDialog {
-            id : dialogHardwarenotConnected
-            visible: false
-            title: "Connect hardware"
-            text: "Please connect the Drone to proceed further."
-            standardButtons: StandardButton.Close
-        }
-        MessageDialog {
-            id : dialogDroneNotRegistered
-            visible: false
-            title: "Register drone"
-            text: "Your drone is not registered."
-            standardButtons: StandardButton.Close
         }
 
         Auth{
@@ -151,6 +124,7 @@ ApplicationWindow {
             }
             onLoginButton:{
                 auth.okButton = true;
+                mainWindow.pushPreventViewSwitch()
             }
         }
 
@@ -175,8 +149,6 @@ ApplicationWindow {
 
         NpntProcess{
             id: npnt
-            onCheck2Changed: npnt.vis=false
-
 }
 
     QtObject {
