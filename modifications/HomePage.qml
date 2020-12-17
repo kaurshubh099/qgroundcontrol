@@ -3,6 +3,7 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.0
 import QtQuick.Dialogs 1.1
 import QGroundControl 1.0
+
 Rectangle{
         id:myRect
         color:"grey"
@@ -16,7 +17,7 @@ Rectangle{
 
 Image {
     id: logo
-    source: "/qmlimages/cropped-SpaceJamUAV-Logo-2048x663.png"
+    source: "/qmlimages/modifications/cropped-SpaceJamUAV-Logo-2048x663.png"
     fillMode: Image.PreserveAspectFit
     width: parent.width/3
     height: parent.height/6

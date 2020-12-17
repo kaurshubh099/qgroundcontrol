@@ -96,7 +96,7 @@ Rectangle{
 
 Image {
     id: logo
-    source: "/qmlimages/cropped-SpaceJamUAV-Logo-2048x663.png"
+    source: "/qmlimages/modifications/cropped-SpaceJamUAV-Logo-2048x663.png"
     fillMode: Image.PreserveAspectFit
     width: parent.width/3
     height: parent.height/6
